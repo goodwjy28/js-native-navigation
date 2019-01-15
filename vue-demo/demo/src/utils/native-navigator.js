@@ -1,7 +1,5 @@
 export default core => {
   return {
-    // push 种类，路径path，完整 url，原生页
-    // path, url, native
     /**
      * 使用原生导航方式，导航 web 页面
      * @param {string} name 路径名，远程 url 地址或原生页面路由 key
@@ -45,11 +43,15 @@ export default core => {
     },
 
     /**
-     * 注册通知，接受前一页面传来的值
-     * @param {funtion} callback
+     * 获取上一页传来的上下文信息
+     * @param {function} callback 回调函数，获取上下文信息
      */
-    receiveGoto (callback) {
-      core.registerJs('noticeGoto', callback)
+    getRouteContext (callback) {
+      this.getRouteContext.callback = callback
+      core.loadWidget('navigator', this)
+      core.evaluateNative('NativeNavigator', 'getRouteContext', function (info) {
+        return window.$nativeBridgeWidget.navigator.getRouteContext.callback(info)
+      })
     },
 
     /**

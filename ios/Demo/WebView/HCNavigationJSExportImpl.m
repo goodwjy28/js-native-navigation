@@ -28,6 +28,12 @@
     return impl;
 }
 
+- (void)getRouteContext:(JSValue *)callback {
+    self.vcContext.jsThread = [NSThread currentThread];
+    NSDictionary *routeContext = self.vcContext.routerContext ? : @{};
+    [self.vcContext executeJSValueThreadSafe:callback args:@[routeContext]];
+}
+
  - (void)push:(NSString *)name type:(NSString *)type param:(NSDictionary *)param {
     self.vcContext.jsThread = [NSThread currentThread];
     dispatch_async(dispatch_get_main_queue(), ^{

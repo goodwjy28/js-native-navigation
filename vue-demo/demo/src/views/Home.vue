@@ -1,12 +1,11 @@
 <template>
   <div class="home">
     <h1>js-native-navigation</h1>
-    <p>首页</p>
     <h2>路由导航</h2>
-    <p>about 页传回来的值：{{backInfo}}</p>
-    <button @click="nativeNavigation()">native 导航下一页 H5 about</button>
-    <button @click="nativeNavigationUrl()">native 导航下一页 外连接 bing</button>
-    <button @click="nativeNavigationNative()">native 导航下一页 原生 detail</button>
+    <p>about 页回传的值：{{backInfo}}</p>
+    <button @click="nativeNavigation()">原生导航到 H5 about</button>
+    <button @click="nativeNavigationUrl()">原生导航到 外连接 H5 Bing</button>
+    <button @click="nativeNavigationNative()">原生导航到 原生页 detail</button>
     <h2>设置原生导航条</h2>
     <button @click="setNativeBarTitle()">设置导航条 title</button>
     <button @click="setNativeBarRight()">设置导航条一个 right button</button>

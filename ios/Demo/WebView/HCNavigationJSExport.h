@@ -40,6 +40,9 @@ JSExportAs(setBarDoubleLeftButton,
                                 itemInfo2:(NSDictionary *)itemInfo2
                                 callback2:(JSValue *)callback2
            );
+JSExportAs(getRouteContext,
+           - (void)getRouteContext:(JSValue *)callback
+           );
 
 @end
 
