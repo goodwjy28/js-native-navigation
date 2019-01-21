@@ -24,11 +24,15 @@ public class NativeNavigationJSImpl {
     }
 
     @JavascriptInterface
-    public void push(String path, String type, String paramJson) {
+     public void push(String path, String type, String paramJson) {
+        Class destClass;
         if ("native".equals(type)) {
-
+            destClass = NativeRouter.push(path);
         } else {
-            Intent intent = new Intent(this.mActivity.getActivityContext(), NavigationActivity.class);
+            destClass = NavigationActivity.class;
+        }
+        if (destClass != null) {
+            Intent intent = new Intent(this.mActivity.getActivityContext(), destClass);
             Bundle bundle = new Bundle();
             bundle.putString(NavigationActivity.ROUTER_BUNDLE_PATH, path);
             bundle.putString(NavigationActivity.ROUTER_BUNDLE_TYPE, type);
