@@ -9,6 +9,7 @@ import java.util.Map;
 
 public class NativeRouter {
 
+    public static final String ROUTER_BASE_URL = "http://192.168.1.112:8080";
     static private Map<String, String> mapper = new HashMap<>();
 
     static {

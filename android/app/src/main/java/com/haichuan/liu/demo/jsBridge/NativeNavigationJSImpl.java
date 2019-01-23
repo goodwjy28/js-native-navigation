@@ -70,4 +70,74 @@ public class NativeNavigationJSImpl {
         Intent intent = new Intent(this.mActivity.getActivityContext(), MainActivity.class);
         this.mActivity.getActivityContext().startActivity(intent);
     }
+
+    // 导航栏设置
+    @JavascriptInterface
+    public void setBarTitle(String title) {
+        this.mActivity.setBarTitle(title);
+    }
+
+    @JavascriptInterface
+    public void setBarRightButton(String itemInfo, final String callback) {
+        try {
+            final JSONObject object = new JSONObject(itemInfo);
+            this.mActivity.getActivityContext().runOnUiThread(new Runnable() {
+                @Override
+                public void run() {
+                    mActivity.setBarRightButton(object, callback);
+                }
+            });
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @JavascriptInterface
+    public void setBarDoubleRightButton(String itemInfo1, final String callback1, String itemInfo2, final String callback2) {
+        try {
+            final JSONObject object1 = new JSONObject(itemInfo1);
+            final JSONObject object2 = new JSONObject(itemInfo2);
+            this.mActivity.getActivityContext().runOnUiThread(new Runnable() {
+                @Override
+                public void run() {
+                    mActivity.setBarDoubleRightButton(object1, callback1, object2, callback2);
+                }
+            });
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+
+    }
+
+    @JavascriptInterface
+    public void setBarLeftButton(String itemInfo,final String callback) {
+        try {
+            final JSONObject object = new JSONObject(itemInfo);
+            this.mActivity.getActivityContext().runOnUiThread(new Runnable() {
+                @Override
+                public void run() {
+                    mActivity.setBarLeftButton(object, callback);
+                }
+            });
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @JavascriptInterface
+    public void setBarDoubleLeftButton(String itemInfo1, final String callback1, String itemInfo2, final String callback2) {
+        try {
+            final JSONObject object1 = new JSONObject(itemInfo1);
+            final JSONObject object2 = new JSONObject(itemInfo2);
+            this.mActivity.getActivityContext().runOnUiThread(new Runnable() {
+                @Override
+                public void run() {
+                    mActivity.setBarDoubleLeftButton(object1, callback1, object2, callback2);
+                }
+            });
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+
+    }
 }
