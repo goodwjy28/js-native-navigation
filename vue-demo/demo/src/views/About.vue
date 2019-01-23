@@ -10,12 +10,11 @@
 <script>
 export default {
   created() {
-    var self = this
-    this.$nativeNavigator.getRouteContext(function (param) {
-      self.content = JSON.stringify(param)
+    this.$nativeNavigator.getRouteContext((param) => {
+      this.content = JSON.stringify(param)
     })
-    this.$nativeNavigator.receiveGoBack(function (param) {
-      self.backInfo = JSON.stringify(param)
+    this.$nativeNavigator.receiveGoBack((param) => {
+      this.backInfo = JSON.stringify(param)
     })
     this.$nativeNavigator.setBarTitle('关于')
   },

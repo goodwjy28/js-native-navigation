@@ -25,9 +25,8 @@ export default {
     HelloWorld
   },
   created() {
-    var self = this
-    this.$nativeNavigator.receiveGoBack(function (param) {
-      self.backInfo = JSON.stringify(param)
+    this.$nativeNavigator.receiveGoBack(param => {
+      this.backInfo = JSON.stringify(param)
     })
     this.$nativeNavigator.setBarTitle('首页')
   },
@@ -49,7 +48,7 @@ export default {
         'image': 'https://static.pptstore.net/icons/00/17/c2c0ea0e090a7d715514_s.png',
         'title': '签到'
       }
-      this.$nativeNavigator.setBarRightButton(itemInfo, function () {
+      this.$nativeNavigator.setBarRightButton(itemInfo, ()=> {
         console.log('点击了签到')
       })
     },
@@ -62,9 +61,9 @@ export default {
         'image': 'https://static.pptstore.net/icons/00/38/d12e521f14ac86e8bee9_s.png',
         'title': '问题'
       }
-      this.$nativeNavigator.setBarDoubleRightButton(itemInfo1, function () {
+      this.$nativeNavigator.setBarDoubleRightButton(itemInfo1, () => {
         console.log('点了签到')
-      }, itemInfo2, function () {
+      }, itemInfo2, () => {
         console.log('点了问题')
       })
     },
@@ -73,7 +72,7 @@ export default {
         'image': '',
         'title': '返回'
       }
-      this.$nativeNavigator.setBarLeftButton(itemInfo, function () {
+      this.$nativeNavigator.setBarLeftButton(itemInfo, () => {
         console.log('点击了返回')
       })
     },
@@ -86,9 +85,9 @@ export default {
         'image': 'https://static.pptstore.net/icons/00/38/d12e521f14ac86e8bee9_s.png',
         'title': '进度'
       }
-      this.$nativeNavigator.setBarDoubleLeftButton(itemInfo1, function () {
+      this.$nativeNavigator.setBarDoubleLeftButton(itemInfo1, () => {
         console.log('点了返回')
-      }, itemInfo2, function () {
+      }, itemInfo2, () => {
         console.log('点了进度')
       })
     }
