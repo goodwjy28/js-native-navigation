@@ -5,6 +5,10 @@
 
 js-native-navigation 的实现是基于 js 和 native 之间的交互，使用的是工具库是 [js-native-bridge](https://github.com/al-liu/js-native-bridge)。
 
+使用终端 cd 到 vue demo 根目录，运行命令 `npm run serve`，运行成功后可看到访问地址，如：`http:192.168.1.122:8080`，iOS 和 Android demo 中的 WebView 加载该地址，便可看到 demo 效果。
+
+以下介绍 js 中如何使用原生导航，iOS 和 Android 原生客户端的实现参考客户端 demo 代码。
+
 ## 导航
 ### 基本导航方法
 #### 跳转到下一页
@@ -64,7 +68,8 @@ this.$nativeNavigator.push('detail', 'native')
 
 
 ## 设置导航条
-使用原生的导航条，体验要比 H5 的更好，但是需要提供给 H5 一些设置导航条的方法。
+使用原生的导航条，体验要比 H5 的更好，但是需要提供给 H5 一些设置导航条的方法，如设置标题和左右两边的按钮。
+以下只是提供部分参考案例，项目中要根据实际情况做定制。
 
 ### 设置标题
 
