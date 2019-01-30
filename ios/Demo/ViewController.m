@@ -12,6 +12,7 @@
 #import "HCRequestJSExportImpl.h"
 #import "HCNavigationJSExportImpl.h"
 #import "HCNavigationJsViewController.h"
+#import "HCRouter.h"
 
 @interface ViewController () <UIWebViewDelegate>
 
@@ -26,7 +27,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    _address = @"http://localhost:8080";
+    _address = HCRouterBaseURL;
     [self reloadUrl:nil];
     
 }

@@ -8,6 +8,7 @@
 
 #import "HCRouter.h"
 #import "HCDetailViewController.h"
+NSString * const HCRouterBaseURL = @"http://192.168.1.107:8080";
 @interface HCRouter ()
 
 @property (nonatomic, copy) NSDictionary *routerMapper;

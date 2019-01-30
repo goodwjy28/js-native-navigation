@@ -11,6 +11,7 @@
 #import "HCKitJSExportImpl.h"
 #import "HCRequestJSExportImpl.h"
 #import "HCNavigationJSExportImpl.h"
+#import "HCRouter.h"
 
 @interface HCNavigationJsViewController () <UIWebViewDelegate>
 
@@ -42,7 +43,7 @@
 - (void)hc_beginRoute {
     if (self.routerPath && ![@"" isEqualToString:self.routerPath]) {
         if ([@"path" isEqualToString:self.routerType]) {
-            NSString *urlString = [NSString stringWithFormat:@"http://localhost:8080%@", self.routerPath];
+            NSString *urlString = [NSString stringWithFormat:@"%@%@", HCRouterBaseURL, self.routerPath];
             NSURL *url = [NSURL URLWithString:urlString];
             NSURLRequest *request = [[NSURLRequest alloc] initWithURL:url];
             [[self getWebView] loadRequest:request];

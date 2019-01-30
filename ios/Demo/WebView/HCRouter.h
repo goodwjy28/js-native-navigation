@@ -10,7 +10,7 @@
 #import <UIKit/UIKit.h>
 
 NS_ASSUME_NONNULL_BEGIN
-
+extern NSString * const HCRouterBaseURL;
 @interface HCRouter : NSObject
 
 + (instancetype)instance;
