@@ -9,6 +9,7 @@
 #import "HCNavigationJSExportImpl.h"
 #import "HCNavigationJsViewController.h"
 #import "HCRouter.h"
+#import "UIView+Navbar.h"
 
 @interface HCNavigationJSExportImpl ()
 
@@ -172,6 +173,7 @@
                 [button setImage:image forState:UIControlStateNormal];
             });
         });
+        [button applyNavBarConstraints:33 height:33];
     } else if (![itemTitle isEqualToString:@""]) {
         buttonItem = [[UIBarButtonItem alloc] initWithTitle:itemTitle style:UIBarButtonItemStylePlain target:self action:action];
     }
