@@ -21,6 +21,7 @@
 		E34B42A021E3585A0030F6BB /* HCKitJSExportImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = E34B429821E358590030F6BB /* HCKitJSExportImpl.m */; };
 		E34B42A121E3585A0030F6BB /* HCJSCoreBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E34B429A21E3585A0030F6BB /* HCJSCoreBaseViewController.m */; };
 		E34B42A321E35B460030F6BB /* HCRequestJSExportImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = E34B42A221E35B450030F6BB /* HCRequestJSExportImpl.m */; };
+		E3A39A152201390400670AF3 /* UIView+Navbar.m in Sources */ = {isa = PBXBuildFile; fileRef = E3A39A142201390400670AF3 /* UIView+Navbar.m */; };
 		E3D705B021E60D19008C70F5 /* HCNavigationJSExportImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = E3D705AF21E60D19008C70F5 /* HCNavigationJSExportImpl.m */; };
 		E3D705B321E60DEF008C70F5 /* HCNavigationJsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3D705B221E60DEF008C70F5 /* HCNavigationJsViewController.m */; };
 		E3D705B621E73525008C70F5 /* HCRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = E3D705B521E73525008C70F5 /* HCRouter.m */; };
@@ -78,6 +79,8 @@
 		E34B429A21E3585A0030F6BB /* HCJSCoreBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCJSCoreBaseViewController.m; sourceTree = "<group>"; };
 		E34B429B21E3585A0030F6BB /* HCUIJSExport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCUIJSExport.h; sourceTree = "<group>"; };
 		E34B42A221E35B450030F6BB /* HCRequestJSExportImpl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCRequestJSExportImpl.m; sourceTree = "<group>"; };
+		E3A39A132201390400670AF3 /* UIView+Navbar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+Navbar.h"; sourceTree = "<group>"; };
+		E3A39A142201390400670AF3 /* UIView+Navbar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+Navbar.m"; sourceTree = "<group>"; };
 		E3D705AD21E60CEE008C70F5 /* HCNavigationJSExport.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCNavigationJSExport.h; sourceTree = "<group>"; };
 		E3D705AE21E60D19008C70F5 /* HCNavigationJSExportImpl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCNavigationJSExportImpl.h; sourceTree = "<group>"; };
 		E3D705AF21E60D19008C70F5 /* HCNavigationJSExportImpl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCNavigationJSExportImpl.m; sourceTree = "<group>"; };
@@ -143,6 +146,8 @@
 				E34B425A21E357E60030F6BB /* AppDelegate.m */,
 				E34B425C21E357E60030F6BB /* ViewController.h */,
 				E34B425D21E357E60030F6BB /* ViewController.m */,
+				E3A39A132201390400670AF3 /* UIView+Navbar.h */,
+				E3A39A142201390400670AF3 /* UIView+Navbar.m */,
 				E3D705B721E739C4008C70F5 /* HCDetailViewController.h */,
 				E3D705B821E739C4008C70F5 /* HCDetailViewController.m */,
 				E3D705B921E739C4008C70F5 /* HCDetailViewController.xib */,
@@ -334,6 +339,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E3A39A152201390400670AF3 /* UIView+Navbar.m in Sources */,
 				E34B42A321E35B460030F6BB /* HCRequestJSExportImpl.m in Sources */,
 				E3D705B321E60DEF008C70F5 /* HCNavigationJsViewController.m in Sources */,
 				E34B429E21E3585A0030F6BB /* NSObject+HCJSContext.m in Sources */,

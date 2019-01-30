@@ -68,7 +68,11 @@ export default core => {
      * @param {function} callback 点击按钮回调该函数
      */
     setBarRightButton (itemInfo, callback) {
-      core.evaluateNative('NativeNavigator', 'setBarRightButton', itemInfo, callback)
+      core.loadWidget('navigator', this)
+      this.setBarRightButton.callback = callback
+      core.evaluateNative('NativeNavigator', 'setBarRightButton', itemInfo, function (info) {
+        return window.$nativeBridgeWidget.navigator.setBarRightButton.callback(info)
+      })
     },
 
     /**
@@ -79,7 +83,14 @@ export default core => {
      * @param {function} callback2 第二个回调函数，点击按钮回调该函数
      */
     setBarDoubleRightButton (itemInfo1, callback1, itemInfo2, callback2) {
-      core.evaluateNative('NativeNavigator', 'setBarDoubleRightButton', itemInfo1, callback1, itemInfo2, callback2)
+      core.loadWidget('navigator', this)
+      this.setBarDoubleRightButton.callback1 = callback1
+      this.setBarDoubleRightButton.callback2 = callback2
+      core.evaluateNative('NativeNavigator', 'setBarDoubleRightButton', itemInfo1, function (info) {
+        return window.$nativeBridgeWidget.navigator.setBarDoubleRightButton.callback1(info)
+      }, itemInfo2, function (info) {
+        return window.$nativeBridgeWidget.navigator.setBarDoubleRightButton.callback2(info)
+      })
     },
 
     /**
@@ -88,7 +99,11 @@ export default core => {
      * @param {function} callback 点击按钮回调该函数
      */
     setBarLeftButton (itemInfo, callback) {
-      core.evaluateNative('NativeNavigator', 'setBarLeftButton', itemInfo, callback)
+      core.loadWidget('navigator', this)
+      this.setBarLeftButton.callback = callback
+      core.evaluateNative('NativeNavigator', 'setBarLeftButton', itemInfo, function (info) {
+        return window.$nativeBridgeWidget.navigator.setBarLeftButton.callback(info)
+      })
     },
 
     /**
@@ -99,7 +114,14 @@ export default core => {
      * @param {function} callback2 第二个回调函数，点击按钮回调该函数
      */
     setBarDoubleLeftButton (itemInfo1, callback1, itemInfo2, callback2) {
-      core.evaluateNative('NativeNavigator', 'setBarDoubleLeftButton', itemInfo1, callback1, itemInfo2, callback2)
+      core.loadWidget('navigator', this)
+      this.setBarDoubleLeftButton.callback1 = callback1
+      this.setBarDoubleLeftButton.callback2 = callback2
+      core.evaluateNative('NativeNavigator', 'setBarDoubleLeftButton', itemInfo1, function (info) {
+        return window.$nativeBridgeWidget.navigator.setBarDoubleLeftButton.callback1(info)
+      }, itemInfo2, function (info) {
+        return window.$nativeBridgeWidget.navigator.setBarDoubleLeftButton.callback2(info)
+      })
     }
   }
 }

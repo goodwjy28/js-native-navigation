@@ -16,6 +16,9 @@ export default core => {
       }, function cancel () {
         return window.$nativeBridgeWidget.ui.alert.cancel()
       })
+    },
+    promptAlert (msg) {
+      this.alert('提示', msg, () => {}, () => {})
     }
   }
 }

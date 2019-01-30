@@ -50,6 +50,7 @@ export default {
       }
       this.$nativeNavigator.setBarRightButton(itemInfo, ()=> {
         console.log('点击了签到')
+        this.$nativeUi.promptAlert('点击了签到')
       })
     },
     setNativeBarDoubleRight: function () {
@@ -63,8 +64,10 @@ export default {
       }
       this.$nativeNavigator.setBarDoubleRightButton(itemInfo1, () => {
         console.log('点了签到')
+        this.$nativeUi.promptAlert('点了签到')
       }, itemInfo2, () => {
         console.log('点了问题')
+        this.$nativeUi.promptAlert('点了问题')
       })
     },
     setNativeBarLeft: function () {
@@ -74,6 +77,7 @@ export default {
       }
       this.$nativeNavigator.setBarLeftButton(itemInfo, () => {
         console.log('点击了返回')
+        this.$nativeUi.promptAlert('点击了返回')
       })
     },
     setNativeBarDoubleLeft: function () {
@@ -87,8 +91,10 @@ export default {
       }
       this.$nativeNavigator.setBarDoubleLeftButton(itemInfo1, () => {
         console.log('点了返回')
+        this.$nativeNavigator.push('/about', 'path',{'foo': 'bar'})
       }, itemInfo2, () => {
         console.log('点了进度')
+        this.$nativeUi.promptAlert('点了进度')
       })
     }
   },
