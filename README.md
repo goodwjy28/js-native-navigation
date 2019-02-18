@@ -7,6 +7,8 @@ js-native-navigation 的实现是基于 js 和 native 之间的交互，使用�
 
 使用终端 cd 到 vue demo 根目录，运行命令 `npm run serve`，运行成功后可看到访问地址，如：`http:192.168.1.122:8080`，iOS 和 Android demo 中的 WebView 加载该地址，便可看到 demo 效果。
 
+![demo.gif](https://upload-images.jianshu.io/upload_images/292794-53477569673c8042.gif?imageMogr2/auto-orient/strip%7CimageView2/2/w/379)
+
 以下介绍 js 中如何使用原生导航，iOS 和 Android 原生客户端的实现参考客户端 demo 代码。
 
 ## 导航
